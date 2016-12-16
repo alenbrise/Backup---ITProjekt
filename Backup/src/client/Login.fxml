@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.LoginController">
+   <children>
+      <ImageView disable="true" fitHeight="500.0" fitWidth="600.0">
+         <image>
+            <Image url="@Login_Bild.jpg" />
+         </image>
+         <effect>
+            <Glow level="0.17" />
+         </effect>
+      </ImageView>
+      <TextField fx:id="tf_username" layoutX="240.0" layoutY="213.0" prefHeight="27.0" prefWidth="200.0">
+         <font>
+            <Font name="Baskerville Bold" size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#e44317" />
+         </effect></TextField>
+      <Label fx:id="text_Benutzername" layoutX="91.0" layoutY="216.0" text="Benutzername:" textFill="#e44417f5">
+         <font>
+            <Font name="Baskerville Bold" size="18.0" />
+         </font>
+         <effect>
+            <Lighting bumpInput="$null">
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></Label>
+      <Button fx:id="b_startGame" layoutX="240.0" layoutY="301.0" mnemonicParsing="false" onAction="#startGame" text="Spiel starten" textFill="#e82e44">
+         <font>
+            <Font name="Baskerville Bold" size="14.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect></Button>
+      <Label fx:id="text_LoginAtlantis" layoutX="253.0" layoutY="14.0" text="Atlantis" textFill="#e44317">
+         <font>
+            <Font name="Baskerville Bold" size="36.0" />
+         </font>
+         <effect>
+            <Lighting bumpInput="$null">
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></Label>
+      <Label fx:id="text_Fehlermeldung" layoutX="191.0" layoutY="100.0" prefHeight="27.0" prefWidth="218.0" textFill="#e44317">
+         <font>
+            <Font name="Baskerville Bold" size="18.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <Button fx:id="hostButton" layoutX="240.0" layoutY="353.0" mnemonicParsing="false" onAction="#setSocket" text="Host" />
+      <TextField fx:id="ipAdresse" alignment="CENTER" layoutX="310.0" layoutY="353.0" promptText="enter IP Adress" />
+      <Button fx:id="serverButton" layoutX="466.0" layoutY="353.0" mnemonicParsing="false" onAction="#setServerSocket" text="Connect to Server" />
+   </children>
+</Pane>
